@@ -40,7 +40,7 @@
         bodies = [[NSMutableArray alloc] init];
         shapes = [[NSMutableArray alloc] init];
         
-        simulationRate = 8.0;
+        simulationRate = 1.0;
         simulationSteps = 100;
         }
     return(self);
