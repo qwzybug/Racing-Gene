@@ -17,7 +17,6 @@
 }
 
 @property (readwrite, nonatomic, retain) CScene *sceneGraph;
-@property (readwrite, nonatomic, retain) CPhysicsBody *carBody;
 @property (readwrite, nonatomic, retain) CVehicle *vehicle;
 
 

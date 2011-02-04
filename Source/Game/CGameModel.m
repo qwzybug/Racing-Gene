@@ -23,7 +23,6 @@ static void updateShape(void *ptr, void* unused);
 
 @interface CGameModel ()
 @property (readwrite, nonatomic, retain) CPhysicsSpace *chipmunkSpace;
-@property (readwrite, nonatomic, retain) CPhysicsShape *ballShape;
 
 - (void)setup;
 @end
@@ -33,11 +32,9 @@ static void updateShape(void *ptr, void* unused);
 @implementation CGameModel
 
 @synthesize sceneGraph;
-@synthesize carBody;
 @synthesize vehicle;
 
 @synthesize chipmunkSpace;
-@synthesize ballShape;
 
 - (id)init
     {
@@ -115,9 +112,6 @@ static void updateShape(void *ptr, void* unused);
 
     self.sceneGraph.nodes = [NSArray arrayWithObjects:
         theLandscapeNode,
-//        theChassisNode,
-//        theFrontWheelNode,
-//        theRearWheelNode,
         self.vehicle.geometry,
         NULL];
     }
