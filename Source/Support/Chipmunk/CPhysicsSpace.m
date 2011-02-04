@@ -57,7 +57,15 @@
 
 - (void)dealloc
     {
-    cpSpaceDestroy(self.space);
+    [bodies release];
+    bodies = NULL;
+    
+    [shapes release];
+    shapes = NULL;
+
+    cpSpaceFree(space);
+    space = NULL;
+    
     //
     [super dealloc];
     }

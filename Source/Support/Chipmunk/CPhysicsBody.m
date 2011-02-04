@@ -38,7 +38,7 @@
     
 - (void)dealloc
     {
-    cpBodyDestroy(body);
+    cpBodyFree(body);
     body = NULL;
     //
     [super dealloc];

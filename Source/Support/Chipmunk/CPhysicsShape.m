@@ -45,6 +45,16 @@
     return(self);
     }
 
+- (void)dealloc
+    {
+    cpShapeFree(shape);
+    shape = NULL;
+    //
+    [super dealloc];
+    }
+
+#pragma mark -
+
 - (cpGroup)group
     {
     return(self.shape->group);
