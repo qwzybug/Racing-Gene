@@ -19,6 +19,7 @@
 #import "CPhysicsShape_GeometryExtensions.h"
 #import "CSceneGeometry_ConvenienceExtensions.h"
 #import "CPhysicsConstraint.h"
+#import "CPhysicsBody_GeometryExtensions.h"
 
 @interface CSimpleCar ()
 - (void)setup;
@@ -37,8 +38,6 @@
         }
     return(self);
     }
-
-
 
 - (void)setup
     {
@@ -61,6 +60,8 @@
     CGFloat kWheelRate = -10;
 
     // #################################################################
+
+//    [self.chassis addWheelAt:(cpVect){ 50, carY } radius:tireRadius motorized:YES rate:kWheelRate];
 
     self.frontWheel = [[[CPhysicsBody alloc] initWithMass:100 inertia:100] autorelease];
     self.frontWheel.position = (cpVect){ 50, carY };
@@ -102,24 +103,7 @@
 
     // #################################################################
 
-    CSceneGeometry *theChassisNode = [CSceneGeometry flatGeometryNodeWithCoordinatesBuffer:[self.chassis.shape vertexBuffer]];
-    theBodyShape.userInfo = theChassisNode;
-
-    CSceneGeometry *theFrontWheelNode = [CSceneGeometry circleGeometryNodeWithRadius:cpCircleShapeGetRadius(self.frontWheel.shape.shape)];
-    theFrontWheelShape.userInfo = theFrontWheelNode;
-
-    CSceneGeometry *theRearWheelNode = [CSceneGeometry circleGeometryNodeWithRadius:cpCircleShapeGetRadius(self.frontWheel.shape.shape)];
-    theRearWheelShape.userInfo = theRearWheelNode;
-
-
-    CSceneGroup *theGroup = [[[CSceneGroup alloc] init] autorelease];
-    theGroup.nodes = [NSArray arrayWithObjects:
-        theChassisNode,
-        theFrontWheelNode,
-        theRearWheelNode,
-        NULL];
-
-    self.geometry = (id)theGroup;
+    self.geometry = (id)self.chassis.geometry;
 
     }
 

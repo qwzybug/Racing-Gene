@@ -14,5 +14,6 @@
 
 @property (readonly, nonatomic, retain) CPhysicsShape *shape;
 
+- (CPhysicsBody *)addWheelAt:(cpVect)inPosition radius:(cpFloat)inRadius motorized:(BOOL)inMotorized rate:(cpFloat)inRate;
 
 @end

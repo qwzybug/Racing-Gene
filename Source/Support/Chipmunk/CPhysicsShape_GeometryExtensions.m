@@ -11,10 +11,12 @@
 #import "OpenGLTypes.h"
 #import "CVertexBuffer_FactoryExtensions.h"
 #import "CVertexBufferReference.h"
+#import "CSceneGeometry.h"
+#import "CSceneGeometry_ConvenienceExtensions.h"
 
 @implementation CPhysicsShape (CPhysicsShape_GeometryExtensions)
 
-- (CVertexBuffer *)vertexBuffer
+- (CSceneNode *)geometry
     {
     cpShape *theShape = self.shape;
 
@@ -53,8 +55,12 @@
 
         theVertexBuffer = [[[CVertexBuffer alloc] initWithTarget:GL_ARRAY_BUFFER usage:GL_STATIC_DRAW data:theData] autorelease];
         }
+
+    CSceneGeometry *theGeometry = [CSceneGeometry flatGeometryNodeWithCoordinatesBuffer:theVertexBuffer];
     
-    return(theVertexBuffer);
+    self.userInfo = theGeometry;
+    
+    return(theGeometry);
     }
 
 @end

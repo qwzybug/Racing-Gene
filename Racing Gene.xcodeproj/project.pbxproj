@@ -12,6 +12,7 @@
 		4537832F12FB978C00B9D736 /* CPhysicsConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4537832E12FB978C00B9D736 /* CPhysicsConstraint.m */; };
 		4596DDDB12FBC759005015A4 /* CPhysicsBody_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4596DDDA12FBC758005015A4 /* CPhysicsBody_Extensions.m */; };
 		45D199D112FBD4BC00078323 /* CVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D199D012FBD4BC00078323 /* CVehicle.m */; };
+		45D199D412FBD80100078323 /* CPhysicsBody_GeometryExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D199D312FBD80100078323 /* CPhysicsBody_GeometryExtensions.m */; };
 		45FD6A6C12FA463F00523A5A /* CMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A4F12FA463E00523A5A /* CMainWindowController.m */; };
 		45FD6A7312FA463F00523A5A /* CApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5E12FA463E00523A5A /* CApplicationDelegate.m */; };
 		45FD6A7412FA463F00523A5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5F12FA463E00523A5A /* main.m */; };
@@ -124,6 +125,8 @@
 		4596DDDA12FBC758005015A4 /* CPhysicsBody_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsBody_Extensions.m; sourceTree = "<group>"; };
 		45D199CF12FBD4BC00078323 /* CVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = CVehicle.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		45D199D012FBD4BC00078323 /* CVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CVehicle.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		45D199D212FBD80100078323 /* CPhysicsBody_GeometryExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsBody_GeometryExtensions.h; sourceTree = "<group>"; };
+		45D199D312FBD80100078323 /* CPhysicsBody_GeometryExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsBody_GeometryExtensions.m; sourceTree = "<group>"; };
 		45FD6A4E12FA463E00523A5A /* CMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMainWindowController.h; sourceTree = "<group>"; };
 		45FD6A4F12FA463E00523A5A /* CMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMainWindowController.m; sourceTree = "<group>"; };
 		45FD6A5D12FA463E00523A5A /* CApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CApplicationDelegate.h; sourceTree = "<group>"; };
@@ -476,6 +479,8 @@
 				45FD6F1112FA55D600523A5A /* CPhysicsBody.m */,
 				4596DDD912FBC757005015A4 /* CPhysicsBody_Extensions.h */,
 				4596DDDA12FBC758005015A4 /* CPhysicsBody_Extensions.m */,
+				45D199D212FBD80100078323 /* CPhysicsBody_GeometryExtensions.h */,
+				45D199D312FBD80100078323 /* CPhysicsBody_GeometryExtensions.m */,
 				45FD6F1212FA55D600523A5A /* CPhysicsShape.h */,
 				45FD6F1312FA55D600523A5A /* CPhysicsShape.m */,
 				45FD6F1412FA55D600523A5A /* CPhysicsShape_GeometryExtensions.h */,
@@ -688,6 +693,7 @@
 				4537832F12FB978C00B9D736 /* CPhysicsConstraint.m in Sources */,
 				4596DDDB12FBC759005015A4 /* CPhysicsBody_Extensions.m in Sources */,
 				45D199D112FBD4BC00078323 /* CVehicle.m in Sources */,
+				45D199D412FBD80100078323 /* CPhysicsBody_GeometryExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

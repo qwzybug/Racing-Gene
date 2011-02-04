@@ -1,16 +1,16 @@
 //
-//  CPhysicsShape_GeometryExtensions.h
+//  CPhysicsBody_GeometryExtensions.h
 //  Racing Gene
 //
-//  Created by Jonathan Wight on 01/31/11.
+//  Created by Jonathan Wight on 02/03/11.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import "CPhysicsShape.h"
+#import "CPhysicsBody.h"
 
 @class CSceneNode;
 
-@interface CPhysicsShape (CPhysicsShape_GeometryExtensions)
+@interface CPhysicsBody (CPhysicsBody_GeometryExtensions)
 
 @property (readonly, nonatomic, retain) CSceneNode *geometry;
 
