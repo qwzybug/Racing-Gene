@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		453782A412FB902000B9D736 /* CGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A312FB902000B9D736 /* CGameModel.m */; };
-		453782A712FB902900B9D736 /* CVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A612FB902900B9D736 /* CVehicle.m */; };
+		453782A712FB902900B9D736 /* CSimpleCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A612FB902900B9D736 /* CSimpleCar.m */; };
 		4537832F12FB978C00B9D736 /* CPhysicsConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4537832E12FB978C00B9D736 /* CPhysicsConstraint.m */; };
 		4596DDDB12FBC759005015A4 /* CPhysicsBody_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4596DDDA12FBC758005015A4 /* CPhysicsBody_Extensions.m */; };
+		45D199D112FBD4BC00078323 /* CVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D199D012FBD4BC00078323 /* CVehicle.m */; };
 		45FD6A6C12FA463F00523A5A /* CMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A4F12FA463E00523A5A /* CMainWindowController.m */; };
 		45FD6A7312FA463F00523A5A /* CApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5E12FA463E00523A5A /* CApplicationDelegate.m */; };
 		45FD6A7412FA463F00523A5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5F12FA463E00523A5A /* main.m */; };
@@ -87,8 +88,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		453782A212FB902000B9D736 /* CGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGameModel.h; sourceTree = "<group>"; };
 		453782A312FB902000B9D736 /* CGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGameModel.m; sourceTree = "<group>"; };
-		453782A512FB902900B9D736 /* CVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CVehicle.h; sourceTree = "<group>"; };
-		453782A612FB902900B9D736 /* CVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVehicle.m; sourceTree = "<group>"; };
+		453782A512FB902900B9D736 /* CSimpleCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSimpleCar.h; sourceTree = "<group>"; };
+		453782A612FB902900B9D736 /* CSimpleCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSimpleCar.m; sourceTree = "<group>"; };
 		4537832D12FB978C00B9D736 /* CPhysicsConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsConstraint.h; sourceTree = "<group>"; };
 		4537832E12FB978C00B9D736 /* CPhysicsConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsConstraint.m; sourceTree = "<group>"; };
 		4537833812FB983A00B9D736 /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
@@ -121,6 +122,8 @@
 		4537835412FB983A00B9D736 /* cpVect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpVect.h; sourceTree = "<group>"; };
 		4596DDD912FBC757005015A4 /* CPhysicsBody_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsBody_Extensions.h; sourceTree = "<group>"; };
 		4596DDDA12FBC758005015A4 /* CPhysicsBody_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsBody_Extensions.m; sourceTree = "<group>"; };
+		45D199CF12FBD4BC00078323 /* CVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = CVehicle.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		45D199D012FBD4BC00078323 /* CVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CVehicle.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		45FD6A4E12FA463E00523A5A /* CMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMainWindowController.h; sourceTree = "<group>"; };
 		45FD6A4F12FA463E00523A5A /* CMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMainWindowController.m; sourceTree = "<group>"; };
 		45FD6A5D12FA463E00523A5A /* CApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CApplicationDelegate.h; sourceTree = "<group>"; };
@@ -215,7 +218,7 @@
 		45FD6F4512FA55D600523A5A /* CSceneGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGeometry.m; sourceTree = "<group>"; };
 		45FD6F4612FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGeometry_ConvenienceExtensions.h; sourceTree = "<group>"; };
 		45FD6F4712FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGeometry_ConvenienceExtensions.m; sourceTree = "<group>"; };
-		45FD6F4812FA55D600523A5A /* CSceneGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CSceneGroup.h; sourceTree = "<group>"; };
+		45FD6F4812FA55D600523A5A /* CSceneGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGroup.h; sourceTree = "<group>"; };
 		45FD6F4912FA55D600523A5A /* CSceneGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGroup.m; sourceTree = "<group>"; };
 		45FD6F4A12FA55D600523A5A /* CScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CScene.h; sourceTree = "<group>"; };
 		45FD6F4B12FA55D600523A5A /* CScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CScene.m; sourceTree = "<group>"; };
@@ -297,8 +300,10 @@
 			children = (
 				453782A212FB902000B9D736 /* CGameModel.h */,
 				453782A312FB902000B9D736 /* CGameModel.m */,
-				453782A512FB902900B9D736 /* CVehicle.h */,
-				453782A612FB902900B9D736 /* CVehicle.m */,
+				45D199CF12FBD4BC00078323 /* CVehicle.h */,
+				45D199D012FBD4BC00078323 /* CVehicle.m */,
+				453782A512FB902900B9D736 /* CSimpleCar.h */,
+				453782A612FB902900B9D736 /* CSimpleCar.m */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -679,9 +684,10 @@
 				45FD6F6D12FA55D600523A5A /* CSceneGraphRenderer.m in Sources */,
 				45FD6F7312FA562400523A5A /* CRandom.m in Sources */,
 				453782A412FB902000B9D736 /* CGameModel.m in Sources */,
-				453782A712FB902900B9D736 /* CVehicle.m in Sources */,
+				453782A712FB902900B9D736 /* CSimpleCar.m in Sources */,
 				4537832F12FB978C00B9D736 /* CPhysicsConstraint.m in Sources */,
 				4596DDDB12FBC759005015A4 /* CPhysicsBody_Extensions.m in Sources */,
+				45D199D112FBD4BC00078323 /* CVehicle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,28 +739,27 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Racing_Gene_Prefix.pch;
-				INFOPLIST_FILE = "Racing_Gene-Info.plist";
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Externals/Chipmunk-5.3.4/include/chipmunk";
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Externals/Chipmunk-5.3.4/msvc/glut/lib\"",
-					"\"$(SRCROOT)/Externals/Chipmunk-5.3.4/Objective-Chipmunk/Objective-Chipmunk/Objective-Chipmunk-simulator\"",
-				);
 				PRODUCT_NAME = "Racing Gene";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/Externals/Chipmunk-5.3.4/include/chipmunk";
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = macosx10.6;
 			};
 			name = Debug;
@@ -762,11 +767,13 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = macosx10.6;
 			};
 			name = Release;

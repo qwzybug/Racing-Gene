@@ -1,12 +1,12 @@
 //
-//  CCar.h
-//  Racing Gene
+//  CVehicle.h
+//  
 //
 //  Created by Jonathan Wight on 02/03/11.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 @class CSceneGraphNode;
 @class CPhysicsBody;
@@ -16,8 +16,7 @@
 }
 
 @property (readwrite, nonatomic, retain) CPhysicsBody *chassis;
-@property (readwrite, nonatomic, retain) CPhysicsBody *rearWheel;
-@property (readwrite, nonatomic, retain) CPhysicsBody *frontWheel;
 @property (readwrite, nonatomic, retain) CSceneGraphNode *geometry;
+
 
 @end

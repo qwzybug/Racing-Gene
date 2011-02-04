@@ -23,7 +23,7 @@
 #import "CProgram_ConvenienceExtensions.h"
 #import "CGameModel.h"
 #import "CPhysicsBody.h"
-#import "CVehicle.h"
+#import "CSimpleCar.h"
 
 @interface CMainWindowController ()
 @property (readwrite, nonatomic, retain) CGameModel *model;

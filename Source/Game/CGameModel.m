@@ -17,7 +17,7 @@
 #import "CSceneGeometry_ConvenienceExtensions.h"
 #import "CLandscape.h"
 #import "CVertexBuffer.h"
-#import "CVehicle.h"
+#import "CSimpleCar.h"
 
 static void updateShape(void *ptr, void* unused);
 
@@ -106,7 +106,7 @@ static void updateShape(void *ptr, void* unused);
 
 
 
-    self.vehicle = [[[CVehicle alloc] init] autorelease];
+    self.vehicle = [[[CSimpleCar alloc] init] autorelease];
     
     [self.chipmunkSpace addBody:self.vehicle.chassis];
 
