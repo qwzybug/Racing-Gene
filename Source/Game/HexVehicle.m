@@ -29,6 +29,15 @@
 - (void)setup;
 @end
 
+
+static cpFloat
+springForce(cpConstraint *spring, cpFloat dist)
+{
+	cpFloat clamp = 20.0f;
+	return cpfclamp(cpDampedSpringGetRestLength(spring) - dist, -clamp, clamp)*cpDampedSpringGetStiffness(spring);
+}
+
+
 @implementation HexVehicle
 
 @synthesize mainBody;
@@ -82,10 +91,21 @@
 		cpVect pivotP = (cpVect){ p.x - lastP.x, p.y - lastP.y };
 		CPhysicsConstraint *pivot = [[[CPhysicsConstraint alloc] initWithConstraint:cpPivotJointNew2(lastBody.body, cell.body, pivotP, (cpVect){ 0, 0 })] autorelease];
 		[self.mainBody addConstraint:pivot];
-
-		if (gene.next_hex == -1) {
-			
-		}
+		
+		// spring between this point and the last one…
+		float springLength = sqrt(pivotP.x * pivotP.x + pivotP.y * pivotP.y);
+		cpConstraint *spring = cpDampedSpringNew(lastBody.body, cell.body, (cpVect){ 0, 0 }, (cpVect){ 0, 0 }, springLength, 100.0, 0.5);
+		cpDampedSpringSetSpringForceFunc(spring, springForce);
+		CPhysicsConstraint *springConstraint = [[[CPhysicsConstraint alloc] initWithConstraint:spring] autorelease];
+		[self.mainBody addConstraint:springConstraint];
+		
+		// and between this point and the origin
+		cpVect off = (cpVect){ p.x - self.mainBody.position.x, p.y - self.mainBody.position.y };
+		float spring2Length = sqrt(off.x * off.x + off.y * off.y);
+		cpConstraint *spring2 = cpDampedSpringNew(self.mainBody.body, cell.body, (cpVect){ 0, 0 }, (cpVect){ 0, 0 }, spring2Length, 500.0, 0.5);
+		cpDampedSpringSetSpringForceFunc(spring2, springForce);
+		CPhysicsConstraint *spring2Constraint = [[[CPhysicsConstraint alloc] initWithConstraint:spring2] autorelease];
+		[self.mainBody addConstraint:spring2Constraint];
 		
 		// time to freak out
 //		CPhysicsConstraint *motor = [[[CPhysicsConstraint alloc] initWithConstraint:cpSimpleMotorNew(cell.body, lastBody.body, kWheelRate)] autorelease];
