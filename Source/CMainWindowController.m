@@ -23,7 +23,7 @@
 #import "CProgram_ConvenienceExtensions.h"
 #import "CGameModel.h"
 #import "CPhysicsBody.h"
-#import "CVehicle.h"
+#import "HexVehicle.h"
 
 @interface CMainWindowController ()
 @property (readwrite, nonatomic, retain) CGameModel *model;
@@ -69,7 +69,7 @@
     theRenderer.preRenderBlock = ^ (void) {
         [self.model update];
         
-        CGPoint thePosition = self.model.vehicle.chassis.position;
+        CGPoint thePosition = self.model.vehicle.mainBody.position;
         
         theRenderer.transform = Matrix4MakeTranslation(-thePosition.x, -thePosition.y, 1.0);
         

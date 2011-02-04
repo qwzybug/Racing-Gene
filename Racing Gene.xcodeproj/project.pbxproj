@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030DEF9712FBD3AB00F9F6F8 /* HexCritter.m in Sources */ = {isa = PBXBuildFile; fileRef = 030DEF9612FBD3AB00F9F6F8 /* HexCritter.m */; };
+		030DEF9C12FBD41900F9F6F8 /* HexVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 030DEF9B12FBD41900F9F6F8 /* HexVehicle.m */; };
 		453782A412FB902000B9D736 /* CGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A312FB902000B9D736 /* CGameModel.m */; };
 		453782A712FB902900B9D736 /* CVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A612FB902900B9D736 /* CVehicle.m */; };
 		4537832F12FB978C00B9D736 /* CPhysicsConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4537832E12FB978C00B9D736 /* CPhysicsConstraint.m */; };
@@ -81,13 +83,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030DEF9512FBD3AB00F9F6F8 /* HexCritter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexCritter.h; sourceTree = "<group>"; };
+		030DEF9612FBD3AB00F9F6F8 /* HexCritter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexCritter.m; sourceTree = "<group>"; };
+		030DEF9A12FBD41900F9F6F8 /* HexVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexVehicle.h; sourceTree = "<group>"; };
+		030DEF9B12FBD41900F9F6F8 /* HexVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexVehicle.m; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		453782A212FB902000B9D736 /* CGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGameModel.h; sourceTree = "<group>"; };
 		453782A312FB902000B9D736 /* CGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGameModel.m; sourceTree = "<group>"; };
-		453782A512FB902900B9D736 /* CVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CVehicle.h; sourceTree = "<group>"; };
+		453782A512FB902900B9D736 /* CVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVehicle.h; sourceTree = "<group>"; };
 		453782A612FB902900B9D736 /* CVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVehicle.m; sourceTree = "<group>"; };
 		4537832D12FB978C00B9D736 /* CPhysicsConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsConstraint.h; sourceTree = "<group>"; };
 		4537832E12FB978C00B9D736 /* CPhysicsConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsConstraint.m; sourceTree = "<group>"; };
@@ -215,7 +221,7 @@
 		45FD6F4512FA55D600523A5A /* CSceneGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGeometry.m; sourceTree = "<group>"; };
 		45FD6F4612FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGeometry_ConvenienceExtensions.h; sourceTree = "<group>"; };
 		45FD6F4712FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGeometry_ConvenienceExtensions.m; sourceTree = "<group>"; };
-		45FD6F4812FA55D600523A5A /* CSceneGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CSceneGroup.h; sourceTree = "<group>"; };
+		45FD6F4812FA55D600523A5A /* CSceneGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGroup.h; sourceTree = "<group>"; };
 		45FD6F4912FA55D600523A5A /* CSceneGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGroup.m; sourceTree = "<group>"; };
 		45FD6F4A12FA55D600523A5A /* CScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CScene.h; sourceTree = "<group>"; };
 		45FD6F4B12FA55D600523A5A /* CScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CScene.m; sourceTree = "<group>"; };
@@ -299,6 +305,10 @@
 				453782A312FB902000B9D736 /* CGameModel.m */,
 				453782A512FB902900B9D736 /* CVehicle.h */,
 				453782A612FB902900B9D736 /* CVehicle.m */,
+				030DEF9512FBD3AB00F9F6F8 /* HexCritter.h */,
+				030DEF9612FBD3AB00F9F6F8 /* HexCritter.m */,
+				030DEF9A12FBD41900F9F6F8 /* HexVehicle.h */,
+				030DEF9B12FBD41900F9F6F8 /* HexVehicle.m */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -682,6 +692,8 @@
 				453782A712FB902900B9D736 /* CVehicle.m in Sources */,
 				4537832F12FB978C00B9D736 /* CPhysicsConstraint.m in Sources */,
 				4596DDDB12FBC759005015A4 /* CPhysicsBody_Extensions.m in Sources */,
+				030DEF9712FBD3AB00F9F6F8 /* HexCritter.m in Sources */,
+				030DEF9C12FBD41900F9F6F8 /* HexVehicle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

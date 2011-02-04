@@ -10,14 +10,14 @@
 
 @class CScene;
 @class CPhysicsBody;
-@class CVehicle;
+@class HexVehicle;
 
 @interface CGameModel : NSObject {
 
 }
 
 @property (readwrite, nonatomic, retain) CScene *sceneGraph;
-@property (readwrite, nonatomic, retain) CVehicle *vehicle;
+@property (readwrite, nonatomic, retain) HexVehicle *vehicle;
 
 
 - (void)update;

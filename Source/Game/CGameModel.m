@@ -17,7 +17,7 @@
 #import "CSceneGeometry_ConvenienceExtensions.h"
 #import "CLandscape.h"
 #import "CVertexBuffer.h"
-#import "CVehicle.h"
+#import "HexVehicle.h"
 
 static void updateShape(void *ptr, void* unused);
 
@@ -106,9 +106,9 @@ static void updateShape(void *ptr, void* unused);
 
 
 
-    self.vehicle = [[[CVehicle alloc] init] autorelease];
+    self.vehicle = [[[HexVehicle alloc] init] autorelease];
     
-    [self.chipmunkSpace addBody:self.vehicle.chassis];
+    [self.chipmunkSpace addBody:self.vehicle.mainBody];
 
     self.sceneGraph.nodes = [NSArray arrayWithObjects:
         theLandscapeNode,
