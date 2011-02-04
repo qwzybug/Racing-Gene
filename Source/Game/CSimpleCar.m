@@ -46,7 +46,7 @@
     // #################################################################
 
     self.chassis = [[[CPhysicsBody alloc] initWithMass:100 inertia:100] autorelease];
-    self.chassis.position = (cpVect){ 0, 50 };
+    self.chassis.position = (cpVect){ 0, carY };
 
     CPhysicsShape *theBodyShape = [CPhysicsShape boxShapeWithBody:self.chassis size:(CGSize){ 100, 5 }];
     theBodyShape.group = 1;
@@ -56,50 +56,8 @@
 
     // #################################################################
 
-    CGFloat tireRadius = 40.0;
-    CGFloat kWheelRate = -10;
-
-    // #################################################################
-
-//    [self.chassis addWheelAt:(cpVect){ 50, carY } radius:tireRadius motorized:YES rate:kWheelRate];
-
-    self.frontWheel = [[[CPhysicsBody alloc] initWithMass:100 inertia:100] autorelease];
-    self.frontWheel.position = (cpVect){ 50, carY };
-    [self.chassis addSubbody:self.frontWheel];
-
-    CPhysicsShape *theFrontWheelShape = [CPhysicsShape ballShapeWithBody:self.frontWheel radius:tireRadius];
-    theFrontWheelShape.group = 1;
-    theFrontWheelShape.elasticity = 1.4;
-    theFrontWheelShape.friction = 10.0;
-    [self.frontWheel addShape:theFrontWheelShape];
-
-    // #################################################################
-
-    self.rearWheel = [[[CPhysicsBody alloc] initWithMass:100 inertia:100] autorelease];
-    self.rearWheel.position = (cpVect){ -50, carY };
-    [self.chassis addSubbody:self.rearWheel];
-
-    CPhysicsShape *theRearWheelShape = [CPhysicsShape ballShapeWithBody:self.rearWheel radius:tireRadius];
-    theRearWheelShape.group = 1;
-    theRearWheelShape.elasticity = 1.4;
-    theRearWheelShape.friction = 10.0;
-    [self.rearWheel addShape:theRearWheelShape];
-
-    // #################################################################
-
-    CPhysicsConstraint *theRearWheelPivot = [[[CPhysicsConstraint alloc] initWithConstraint:cpPivotJointNew2(self.chassis.body, self.rearWheel.body, (cpVect){ -50, 0 }, (cpVect){ 0, 0 })] autorelease];
-    [self.chassis addConstraint:theRearWheelPivot];
-    
-    CPhysicsConstraint *theFrontWheelPivot = [[[CPhysicsConstraint alloc] initWithConstraint:cpPivotJointNew2(self.chassis.body, self.frontWheel.body, (cpVect){ 50, 0 }, (cpVect){ 0, 0 })] autorelease];
-    [self.chassis addConstraint:theFrontWheelPivot];
-
-    // #################################################################
-
-    CPhysicsConstraint *theRearWheelMotor = [[[CPhysicsConstraint alloc] initWithConstraint:cpSimpleMotorNew(self.frontWheel.body, self.chassis.body, kWheelRate)] autorelease];
-    [self.chassis addConstraint:theRearWheelMotor];
-
-    CPhysicsConstraint *theFrontWheelMotor = [[[CPhysicsConstraint alloc] initWithConstraint:cpSimpleMotorNew(self.rearWheel.body, self.chassis.body, kWheelRate)] autorelease];
-    [self.chassis addConstraint:theFrontWheelMotor];
+    [self.chassis addWheelAt:(cpVect){ 50, carY } radius:40.0 motorized:YES rate:-M_PI / 2.0];
+    [self.chassis addWheelAt:(cpVect){ -50, carY } radius:25.0 motorized:YES rate:-M_PI];
 
     // #################################################################
 

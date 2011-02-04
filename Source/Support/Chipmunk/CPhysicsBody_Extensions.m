@@ -30,7 +30,7 @@
     theWheelShape.friction = 10.0;
     [theWheelBody addShape:theWheelShape];
 
-    CPhysicsConstraint *thePivot = [[[CPhysicsConstraint alloc] initWithConstraint:cpPivotJointNew2(self.body, theWheelBody.body, inPosition, (cpVect){ 0, 0 })] autorelease];
+    CPhysicsConstraint *thePivot = [[[CPhysicsConstraint alloc] initWithConstraint:cpPivotJointNew2(self.body, theWheelBody.body, (cpVect){ inPosition.x - self.position.x, inPosition.y - self.position.y}, (cpVect){ 0, 0 })] autorelease];
     [self addConstraint:thePivot];
 
     if (inMotorized)
@@ -40,6 +40,8 @@
         }
 
     [self addSubbody:theWheelBody];
+    
+    return(theWheelBody);
     }
 
 @end
