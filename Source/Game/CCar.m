@@ -11,6 +11,6 @@
 @implementation CCar
 
 @synthesize geometry;
-@synthesize body;;
+@synthesize body;
 
 @end
