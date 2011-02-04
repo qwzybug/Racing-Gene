@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453782A412FB902000B9D736 /* CGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A312FB902000B9D736 /* CGameModel.m */; };
+		453782A712FB902900B9D736 /* CCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A612FB902900B9D736 /* CCar.m */; };
 		45FD6A6C12FA463F00523A5A /* CMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A4F12FA463E00523A5A /* CMainWindowController.m */; };
-		45FD6A6D12FA463F00523A5A /* CGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5112FA463E00523A5A /* CGameModel.m */; };
 		45FD6A7312FA463F00523A5A /* CApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5E12FA463E00523A5A /* CApplicationDelegate.m */; };
 		45FD6A7412FA463F00523A5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5F12FA463E00523A5A /* main.m */; };
 		45FD6A7712FA463F00523A5A /* Racing_GeneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A6812FA463F00523A5A /* Racing_GeneAppDelegate.m */; };
@@ -83,10 +84,12 @@
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		453782A212FB902000B9D736 /* CGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGameModel.h; sourceTree = "<group>"; };
+		453782A312FB902000B9D736 /* CGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGameModel.m; sourceTree = "<group>"; };
+		453782A512FB902900B9D736 /* CCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCar.h; sourceTree = "<group>"; };
+		453782A612FB902900B9D736 /* CCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCar.m; sourceTree = "<group>"; };
 		45FD6A4E12FA463E00523A5A /* CMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMainWindowController.h; sourceTree = "<group>"; };
 		45FD6A4F12FA463E00523A5A /* CMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMainWindowController.m; sourceTree = "<group>"; };
-		45FD6A5012FA463E00523A5A /* CGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGameModel.h; sourceTree = "<group>"; };
-		45FD6A5112FA463E00523A5A /* CGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGameModel.m; sourceTree = "<group>"; };
 		45FD6A5D12FA463E00523A5A /* CApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CApplicationDelegate.h; sourceTree = "<group>"; };
 		45FD6A5E12FA463E00523A5A /* CApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CApplicationDelegate.m; sourceTree = "<group>"; };
 		45FD6A5F12FA463E00523A5A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -258,19 +261,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		453782A112FB902000B9D736 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				453782A212FB902000B9D736 /* CGameModel.h */,
+				453782A312FB902000B9D736 /* CGameModel.m */,
+				453782A512FB902900B9D736 /* CCar.h */,
+				453782A612FB902900B9D736 /* CCar.m */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		45FD6A4D12FA463E00523A5A /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				45FD6A4E12FA463E00523A5A /* CMainWindowController.h */,
 				45FD6A4F12FA463E00523A5A /* CMainWindowController.m */,
-				45FD6A5012FA463E00523A5A /* CGameModel.h */,
-				45FD6A5112FA463E00523A5A /* CGameModel.m */,
 				45FD6A5D12FA463E00523A5A /* CApplicationDelegate.h */,
 				45FD6A5E12FA463E00523A5A /* CApplicationDelegate.m */,
 				45FD6A5F12FA463E00523A5A /* main.m */,
 				45FD6A6512FA463F00523A5A /* Prefix.pch */,
 				45FD6A6712FA463F00523A5A /* Racing_GeneAppDelegate.h */,
 				45FD6A6812FA463F00523A5A /* Racing_GeneAppDelegate.m */,
+				453782A112FB902000B9D736 /* Game */,
 				45FD6F0E12FA55D600523A5A /* Support */,
 			);
 			path = Source;
@@ -521,7 +534,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				45FD6A6C12FA463F00523A5A /* CMainWindowController.m in Sources */,
-				45FD6A6D12FA463F00523A5A /* CGameModel.m in Sources */,
 				45FD6A7312FA463F00523A5A /* CApplicationDelegate.m in Sources */,
 				45FD6A7412FA463F00523A5A /* main.m in Sources */,
 				45FD6A7712FA463F00523A5A /* Racing_GeneAppDelegate.m in Sources */,
@@ -582,6 +594,8 @@
 				45FD6F6C12FA55D600523A5A /* CSceneGraphNode.m in Sources */,
 				45FD6F6D12FA55D600523A5A /* CSceneGraphRenderer.m in Sources */,
 				45FD6F7312FA562400523A5A /* CRandom.m in Sources */,
+				453782A412FB902000B9D736 /* CGameModel.m in Sources */,
+				453782A712FB902900B9D736 /* CCar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

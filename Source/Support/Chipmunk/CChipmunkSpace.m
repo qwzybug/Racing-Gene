@@ -51,9 +51,6 @@
     if ((self = [self init]) != NULL)
         {
         space->gravity = inGravity;
-//        space->iterations = 100;
-//        space->elasticIterations = 10;
-//        space->damping = 0.1;
         }
     return(self);
     }    
