@@ -1,22 +1,22 @@
 //
-//  CChipmunkSpace.m
+//  CPhysicsSpace.m
 //  Racing Gene
 //
 //  Created by Jonathan Wight on 01/31/11.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import "CChipmunkSpace.h"
+#import "CPhysicsSpace.h"
 
-#import "CChipmunkBody.h"
-#import "CChipmunkShape.h"
+#import "CPhysicsBody.h"
+#import "CPhysicsShape.h"
 
-@interface CChipmunkSpace ()
+@interface CPhysicsSpace ()
 @property (readwrite, nonatomic, retain) NSMutableArray *bodies;
 @property (readwrite, nonatomic, retain) NSMutableArray *shapes;
 @end
 
-@implementation CChipmunkSpace
+@implementation CPhysicsSpace
 
 @synthesize space;
 @synthesize staticBody;
@@ -64,30 +64,30 @@
 
 #pragma mark -
 
-- (CChipmunkBody *)staticBody
+- (CPhysicsBody *)staticBody
     {
     if (staticBody == NULL)
         {
         // TODO what about releasing?
         cpBody *x = &self.space->staticBody;
-        staticBody = [[CChipmunkBody alloc] initWithBody:x];
+        staticBody = [[CPhysicsBody alloc] initWithBody:x];
         }
     return(staticBody);
     }
 
-- (void)addBody:(CChipmunkBody *)inBody;
+- (void)addBody:(CPhysicsBody *)inBody;
     {
     cpSpaceAddBody(self.space, inBody.body);
     [self.bodies addObject:inBody];
     }
 
-- (void)addShape:(CChipmunkShape *)inShape;
+- (void)addShape:(CPhysicsShape *)inShape;
     {
     cpSpaceAddShape(self.space, inShape.shape);
     [self.shapes addObject:inShape];
     }
 
-- (void)addStaticShape:(CChipmunkShape *)inShape;
+- (void)addStaticShape:(CPhysicsShape *)inShape;
     {
     cpSpaceAddStaticShape(self.space, inShape.shape);
     [self.shapes addObject:inShape];

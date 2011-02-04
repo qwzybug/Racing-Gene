@@ -6,12 +6,11 @@
 //  Copyright 2010 toxicsoftware.com. All rights reserved.
 //
 
-#import "CSceneGraphNode.h"
+#import "CSceneNode.h"
 
-#import "CSceneGraphNode.h"
-#import "CGeometryNode.h"
+#import "CSceneNode.h"
 
-@implementation CSceneGraphNode
+@implementation CSceneNode
 
 @synthesize transform;
 

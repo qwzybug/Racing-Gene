@@ -1,35 +1,35 @@
 //
-//  CChipmunkShape.m
+//  CPhysicsShape.m
 //  Racing Gene
 //
 //  Created by Jonathan Wight on 01/31/11.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import "CChipmunkShape.h"
+#import "CPhysicsShape.h"
 
-#import "CChipmunkBody.h"
+#import "CPhysicsBody.h"
 
-@interface CChipmunkShape ()
+@interface CPhysicsShape ()
 @end
 
-@implementation CChipmunkShape
+@implementation CPhysicsShape
 
 @synthesize shape;
 @synthesize body;
 @synthesize userInfo;
 
-+ (CChipmunkShape *)ballShapeWithBody:(CChipmunkBody *)inBody radius:(cpFloat)inRadius
++ (CPhysicsShape *)ballShapeWithBody:(CPhysicsBody *)inBody radius:(cpFloat)inRadius
     {
     return([[[self alloc] initWithShape:cpCircleShapeNew(inBody.body, inRadius, (cpVect){ 0.0, 0.0 })] autorelease]);
     }
 
-+ (CChipmunkShape *)boxShapeWithBody:(CChipmunkBody *)inBody size:(CGSize)inSize;
++ (CPhysicsShape *)boxShapeWithBody:(CPhysicsBody *)inBody size:(CGSize)inSize;
     {
     return([[[self alloc] initWithShape:cpBoxShapeNew(inBody.body, inSize.width, inSize.height)] autorelease]);
     }
 
-+ (CChipmunkShape *)segmentShapeWithBody:(CChipmunkBody *)inBody start:(cpVect)inStart end:(cpVect)inEnd radius:(cpFloat)inRadius
++ (CPhysicsShape *)segmentShapeWithBody:(CPhysicsBody *)inBody start:(cpVect)inStart end:(cpVect)inEnd radius:(cpFloat)inRadius
     {
     return([[[self alloc] initWithShape:cpSegmentShapeNew(inBody.body, inStart, inEnd, inRadius)] autorelease]);
     }
@@ -40,7 +40,7 @@
         {
         shape = inShape;
         shape->data = self;
-        body = [AssertCast_(CChipmunkBody, shape->body->data) retain];
+        body = [AssertCast_(CPhysicsBody, shape->body->data) retain];
         }
     return(self);
     }

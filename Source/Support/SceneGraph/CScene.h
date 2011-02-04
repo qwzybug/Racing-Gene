@@ -1,16 +1,16 @@
 //
-//  CSceneGraph.m
+//  CSceneGraph.h
 //  Racing Genes
 //
 //  Created by Jonathan Wight on 09/23/10.
 //  Copyright 2010 toxicsoftware.com. All rights reserved.
 //
 
-#import "CSceneGraph.h"
+#import "CSceneGroupNode.h"
 
-#import "CSceneGraphNode.h"
+@interface CScene : CSceneGroupNode {
+}
 
-@implementation CSceneGraph
-
+//- (id)initWithPath:(NSString *)inPath;
 
 @end

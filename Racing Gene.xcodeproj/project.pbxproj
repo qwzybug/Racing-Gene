@@ -45,10 +45,10 @@
 		45FD6D4A12FA465000523A5A /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6C3312FA465000523A5A /* cpVect.c */; };
 		45FD6D7612FA46E700523A5A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FD6D7512FA46E700523A5A /* OpenGL.framework */; };
 		45FD6D7A12FA46EF00523A5A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FD6D7912FA46EF00523A5A /* QuartzCore.framework */; };
-		45FD6F5012FA55D600523A5A /* CChipmunkBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1112FA55D600523A5A /* CChipmunkBody.m */; };
-		45FD6F5112FA55D600523A5A /* CChipmunkShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1312FA55D600523A5A /* CChipmunkShape.m */; };
-		45FD6F5212FA55D600523A5A /* CChipmunkShape_GeometryExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1512FA55D600523A5A /* CChipmunkShape_GeometryExtensions.m */; };
-		45FD6F5312FA55D600523A5A /* CChipmunkSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1712FA55D600523A5A /* CChipmunkSpace.m */; };
+		45FD6F5012FA55D600523A5A /* CPhysicsBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1112FA55D600523A5A /* CPhysicsBody.m */; };
+		45FD6F5112FA55D600523A5A /* CPhysicsShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1312FA55D600523A5A /* CPhysicsShape.m */; };
+		45FD6F5212FA55D600523A5A /* CPhysicsShape_GeometryExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1512FA55D600523A5A /* CPhysicsShape_GeometryExtensions.m */; };
+		45FD6F5312FA55D600523A5A /* CPhysicsSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1712FA55D600523A5A /* CPhysicsSpace.m */; };
 		45FD6F5412FA55D600523A5A /* CLandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1912FA55D600523A5A /* CLandscape.m */; };
 		45FD6F5512FA55D600523A5A /* Noise.c in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1B12FA55D600523A5A /* Noise.c */; };
 		45FD6F5612FA55D600523A5A /* CHeightMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F1E12FA55D600523A5A /* CHeightMap.m */; };
@@ -69,11 +69,11 @@
 		45FD6F6512FA55D600523A5A /* CRendererOpenGLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F3E12FA55D600523A5A /* CRendererOpenGLLayer.m */; };
 		45FD6F6612FA55D600523A5A /* CRendererView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4012FA55D600523A5A /* CRendererView.m */; };
 		45FD6F6712FA55D600523A5A /* CRendererView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4212FA55D600523A5A /* CRendererView2.m */; };
-		45FD6F6812FA55D600523A5A /* CGeometryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4512FA55D600523A5A /* CGeometryNode.m */; };
-		45FD6F6912FA55D600523A5A /* CGeometryNode_ConvenienceExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4712FA55D600523A5A /* CGeometryNode_ConvenienceExtensions.m */; };
-		45FD6F6A12FA55D600523A5A /* CGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4912FA55D600523A5A /* CGroupNode.m */; };
-		45FD6F6B12FA55D600523A5A /* CSceneGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4B12FA55D600523A5A /* CSceneGraph.m */; };
-		45FD6F6C12FA55D600523A5A /* CSceneGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4D12FA55D600523A5A /* CSceneGraphNode.m */; };
+		45FD6F6812FA55D600523A5A /* CSceneGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4512FA55D600523A5A /* CSceneGeometry.m */; };
+		45FD6F6912FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4712FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m */; };
+		45FD6F6A12FA55D600523A5A /* CSceneGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4912FA55D600523A5A /* CSceneGroupNode.m */; };
+		45FD6F6B12FA55D600523A5A /* CScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4B12FA55D600523A5A /* CScene.m */; };
+		45FD6F6C12FA55D600523A5A /* CSceneNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4D12FA55D600523A5A /* CSceneNode.m */; };
 		45FD6F6D12FA55D600523A5A /* CSceneGraphRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4F12FA55D600523A5A /* CSceneGraphRenderer.m */; };
 		45FD6F7312FA562400523A5A /* CRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F7212FA562400523A5A /* CRandom.m */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -131,14 +131,14 @@
 		45FD6D7512FA46E700523A5A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		45FD6D7912FA46EF00523A5A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		45FD6DFA12FA4E5A00523A5A /* Asserts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asserts.h; sourceTree = "<group>"; };
-		45FD6F1012FA55D600523A5A /* CChipmunkBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CChipmunkBody.h; sourceTree = "<group>"; };
-		45FD6F1112FA55D600523A5A /* CChipmunkBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CChipmunkBody.m; sourceTree = "<group>"; };
-		45FD6F1212FA55D600523A5A /* CChipmunkShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CChipmunkShape.h; sourceTree = "<group>"; };
-		45FD6F1312FA55D600523A5A /* CChipmunkShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CChipmunkShape.m; sourceTree = "<group>"; };
-		45FD6F1412FA55D600523A5A /* CChipmunkShape_GeometryExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CChipmunkShape_GeometryExtensions.h; sourceTree = "<group>"; };
-		45FD6F1512FA55D600523A5A /* CChipmunkShape_GeometryExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CChipmunkShape_GeometryExtensions.m; sourceTree = "<group>"; };
-		45FD6F1612FA55D600523A5A /* CChipmunkSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CChipmunkSpace.h; sourceTree = "<group>"; };
-		45FD6F1712FA55D600523A5A /* CChipmunkSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CChipmunkSpace.m; sourceTree = "<group>"; };
+		45FD6F1012FA55D600523A5A /* CPhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsBody.h; sourceTree = "<group>"; };
+		45FD6F1112FA55D600523A5A /* CPhysicsBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsBody.m; sourceTree = "<group>"; };
+		45FD6F1212FA55D600523A5A /* CPhysicsShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsShape.h; sourceTree = "<group>"; };
+		45FD6F1312FA55D600523A5A /* CPhysicsShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsShape.m; sourceTree = "<group>"; };
+		45FD6F1412FA55D600523A5A /* CPhysicsShape_GeometryExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsShape_GeometryExtensions.h; sourceTree = "<group>"; };
+		45FD6F1512FA55D600523A5A /* CPhysicsShape_GeometryExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsShape_GeometryExtensions.m; sourceTree = "<group>"; };
+		45FD6F1612FA55D600523A5A /* CPhysicsSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsSpace.h; sourceTree = "<group>"; };
+		45FD6F1712FA55D600523A5A /* CPhysicsSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsSpace.m; sourceTree = "<group>"; };
 		45FD6F1812FA55D600523A5A /* CLandscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLandscape.h; sourceTree = "<group>"; };
 		45FD6F1912FA55D600523A5A /* CLandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLandscape.m; sourceTree = "<group>"; };
 		45FD6F1A12FA55D600523A5A /* Noise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Noise.h; sourceTree = "<group>"; };
@@ -180,16 +180,16 @@
 		45FD6F4012FA55D600523A5A /* CRendererView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRendererView.m; sourceTree = "<group>"; };
 		45FD6F4112FA55D600523A5A /* CRendererView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRendererView2.h; sourceTree = "<group>"; };
 		45FD6F4212FA55D600523A5A /* CRendererView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRendererView2.m; sourceTree = "<group>"; };
-		45FD6F4412FA55D600523A5A /* CGeometryNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGeometryNode.h; sourceTree = "<group>"; };
-		45FD6F4512FA55D600523A5A /* CGeometryNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGeometryNode.m; sourceTree = "<group>"; };
-		45FD6F4612FA55D600523A5A /* CGeometryNode_ConvenienceExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGeometryNode_ConvenienceExtensions.h; sourceTree = "<group>"; };
-		45FD6F4712FA55D600523A5A /* CGeometryNode_ConvenienceExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGeometryNode_ConvenienceExtensions.m; sourceTree = "<group>"; };
-		45FD6F4812FA55D600523A5A /* CGroupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGroupNode.h; sourceTree = "<group>"; };
-		45FD6F4912FA55D600523A5A /* CGroupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGroupNode.m; sourceTree = "<group>"; };
-		45FD6F4A12FA55D600523A5A /* CSceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGraph.h; sourceTree = "<group>"; };
-		45FD6F4B12FA55D600523A5A /* CSceneGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGraph.m; sourceTree = "<group>"; };
-		45FD6F4C12FA55D600523A5A /* CSceneGraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGraphNode.h; sourceTree = "<group>"; };
-		45FD6F4D12FA55D600523A5A /* CSceneGraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGraphNode.m; sourceTree = "<group>"; };
+		45FD6F4412FA55D600523A5A /* CSceneGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGeometry.h; sourceTree = "<group>"; };
+		45FD6F4512FA55D600523A5A /* CSceneGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGeometry.m; sourceTree = "<group>"; };
+		45FD6F4612FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGeometry_ConvenienceExtensions.h; sourceTree = "<group>"; };
+		45FD6F4712FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGeometry_ConvenienceExtensions.m; sourceTree = "<group>"; };
+		45FD6F4812FA55D600523A5A /* CSceneGroupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGroupNode.h; sourceTree = "<group>"; };
+		45FD6F4912FA55D600523A5A /* CSceneGroupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGroupNode.m; sourceTree = "<group>"; };
+		45FD6F4A12FA55D600523A5A /* CScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CScene.h; sourceTree = "<group>"; };
+		45FD6F4B12FA55D600523A5A /* CScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CScene.m; sourceTree = "<group>"; };
+		45FD6F4C12FA55D600523A5A /* CSceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneNode.h; sourceTree = "<group>"; };
+		45FD6F4D12FA55D600523A5A /* CSceneNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneNode.m; sourceTree = "<group>"; };
 		45FD6F4E12FA55D600523A5A /* CSceneGraphRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGraphRenderer.h; sourceTree = "<group>"; };
 		45FD6F4F12FA55D600523A5A /* CSceneGraphRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGraphRenderer.m; sourceTree = "<group>"; };
 		45FD6F7112FA562400523A5A /* CRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRandom.h; sourceTree = "<group>"; };
@@ -386,14 +386,14 @@
 		45FD6F0F12FA55D600523A5A /* Chipmunk */ = {
 			isa = PBXGroup;
 			children = (
-				45FD6F1012FA55D600523A5A /* CChipmunkBody.h */,
-				45FD6F1112FA55D600523A5A /* CChipmunkBody.m */,
-				45FD6F1212FA55D600523A5A /* CChipmunkShape.h */,
-				45FD6F1312FA55D600523A5A /* CChipmunkShape.m */,
-				45FD6F1412FA55D600523A5A /* CChipmunkShape_GeometryExtensions.h */,
-				45FD6F1512FA55D600523A5A /* CChipmunkShape_GeometryExtensions.m */,
-				45FD6F1612FA55D600523A5A /* CChipmunkSpace.h */,
-				45FD6F1712FA55D600523A5A /* CChipmunkSpace.m */,
+				45FD6F1012FA55D600523A5A /* CPhysicsBody.h */,
+				45FD6F1112FA55D600523A5A /* CPhysicsBody.m */,
+				45FD6F1212FA55D600523A5A /* CPhysicsShape.h */,
+				45FD6F1312FA55D600523A5A /* CPhysicsShape.m */,
+				45FD6F1412FA55D600523A5A /* CPhysicsShape_GeometryExtensions.h */,
+				45FD6F1512FA55D600523A5A /* CPhysicsShape_GeometryExtensions.m */,
+				45FD6F1612FA55D600523A5A /* CPhysicsSpace.h */,
+				45FD6F1712FA55D600523A5A /* CPhysicsSpace.m */,
 			);
 			path = Chipmunk;
 			sourceTree = "<group>";
@@ -453,16 +453,16 @@
 		45FD6F4312FA55D600523A5A /* SceneGraph */ = {
 			isa = PBXGroup;
 			children = (
-				45FD6F4412FA55D600523A5A /* CGeometryNode.h */,
-				45FD6F4512FA55D600523A5A /* CGeometryNode.m */,
-				45FD6F4612FA55D600523A5A /* CGeometryNode_ConvenienceExtensions.h */,
-				45FD6F4712FA55D600523A5A /* CGeometryNode_ConvenienceExtensions.m */,
-				45FD6F4812FA55D600523A5A /* CGroupNode.h */,
-				45FD6F4912FA55D600523A5A /* CGroupNode.m */,
-				45FD6F4A12FA55D600523A5A /* CSceneGraph.h */,
-				45FD6F4B12FA55D600523A5A /* CSceneGraph.m */,
-				45FD6F4C12FA55D600523A5A /* CSceneGraphNode.h */,
-				45FD6F4D12FA55D600523A5A /* CSceneGraphNode.m */,
+				45FD6F4412FA55D600523A5A /* CSceneGeometry.h */,
+				45FD6F4512FA55D600523A5A /* CSceneGeometry.m */,
+				45FD6F4612FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.h */,
+				45FD6F4712FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m */,
+				45FD6F4812FA55D600523A5A /* CSceneGroupNode.h */,
+				45FD6F4912FA55D600523A5A /* CSceneGroupNode.m */,
+				45FD6F4A12FA55D600523A5A /* CScene.h */,
+				45FD6F4B12FA55D600523A5A /* CScene.m */,
+				45FD6F4C12FA55D600523A5A /* CSceneNode.h */,
+				45FD6F4D12FA55D600523A5A /* CSceneNode.m */,
 				45FD6F4E12FA55D600523A5A /* CSceneGraphRenderer.h */,
 				45FD6F4F12FA55D600523A5A /* CSceneGraphRenderer.m */,
 			);
@@ -563,10 +563,10 @@
 				45FD6D4812FA465000523A5A /* cpSpaceQuery.c in Sources */,
 				45FD6D4912FA465000523A5A /* cpSpaceStep.c in Sources */,
 				45FD6D4A12FA465000523A5A /* cpVect.c in Sources */,
-				45FD6F5012FA55D600523A5A /* CChipmunkBody.m in Sources */,
-				45FD6F5112FA55D600523A5A /* CChipmunkShape.m in Sources */,
-				45FD6F5212FA55D600523A5A /* CChipmunkShape_GeometryExtensions.m in Sources */,
-				45FD6F5312FA55D600523A5A /* CChipmunkSpace.m in Sources */,
+				45FD6F5012FA55D600523A5A /* CPhysicsBody.m in Sources */,
+				45FD6F5112FA55D600523A5A /* CPhysicsShape.m in Sources */,
+				45FD6F5212FA55D600523A5A /* CPhysicsShape_GeometryExtensions.m in Sources */,
+				45FD6F5312FA55D600523A5A /* CPhysicsSpace.m in Sources */,
 				45FD6F5412FA55D600523A5A /* CLandscape.m in Sources */,
 				45FD6F5512FA55D600523A5A /* Noise.c in Sources */,
 				45FD6F5612FA55D600523A5A /* CHeightMap.m in Sources */,
@@ -587,11 +587,11 @@
 				45FD6F6512FA55D600523A5A /* CRendererOpenGLLayer.m in Sources */,
 				45FD6F6612FA55D600523A5A /* CRendererView.m in Sources */,
 				45FD6F6712FA55D600523A5A /* CRendererView2.m in Sources */,
-				45FD6F6812FA55D600523A5A /* CGeometryNode.m in Sources */,
-				45FD6F6912FA55D600523A5A /* CGeometryNode_ConvenienceExtensions.m in Sources */,
-				45FD6F6A12FA55D600523A5A /* CGroupNode.m in Sources */,
-				45FD6F6B12FA55D600523A5A /* CSceneGraph.m in Sources */,
-				45FD6F6C12FA55D600523A5A /* CSceneGraphNode.m in Sources */,
+				45FD6F6812FA55D600523A5A /* CSceneGeometry.m in Sources */,
+				45FD6F6912FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m in Sources */,
+				45FD6F6A12FA55D600523A5A /* CSceneGroupNode.m in Sources */,
+				45FD6F6B12FA55D600523A5A /* CScene.m in Sources */,
+				45FD6F6C12FA55D600523A5A /* CSceneNode.m in Sources */,
 				45FD6F6D12FA55D600523A5A /* CSceneGraphRenderer.m in Sources */,
 				45FD6F7312FA562400523A5A /* CRandom.m in Sources */,
 				453782A412FB902000B9D736 /* CGameModel.m in Sources */,

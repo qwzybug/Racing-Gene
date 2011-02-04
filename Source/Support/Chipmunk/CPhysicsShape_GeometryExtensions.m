@@ -1,18 +1,18 @@
 //
-//  CChipmunkShape_GeometryExtensions.m
+//  CPhysicsShape_GeometryExtensions.m
 //  Racing Gene
 //
 //  Created by Jonathan Wight on 01/31/11.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import "CChipmunkShape_GeometryExtensions.h"
+#import "CPhysicsShape_GeometryExtensions.h"
 
 #import "OpenGLTypes.h"
 #import "CVertexBuffer_FactoryExtensions.h"
 #import "CVertexBufferReference.h"
 
-@implementation CChipmunkShape (CChipmunkShape_GeometryExtensions)
+@implementation CPhysicsShape (CPhysicsShape_GeometryExtensions)
 
 - (CVertexBuffer *)vertexBuffer
     {

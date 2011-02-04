@@ -1,5 +1,5 @@
 //
-//  CTest.h
+//  CGameModel.h
 //  Racing Gene
 //
 //  Created by Jonathan Wight on 01/31/11.
@@ -8,15 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class CSceneGraph;
-@class CChipmunkBody;
+@class CScene;
+@class CPhysicsBody;
 
 @interface CGameModel : NSObject {
 
 }
 
-@property (readwrite, nonatomic, retain) CSceneGraph *sceneGraph;
-@property (readwrite, nonatomic, retain) CChipmunkBody *carBody;
+@property (readwrite, nonatomic, retain) CScene *sceneGraph;
+@property (readwrite, nonatomic, retain) CPhysicsBody *carBody;
 
 - (void)update;
 

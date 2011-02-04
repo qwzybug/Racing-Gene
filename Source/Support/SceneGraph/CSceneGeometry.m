@@ -6,7 +6,7 @@
 //  Copyright 2010 toxicsoftware.com. All rights reserved.
 //
 
-#import "CGeometryNode.h"
+#import "CSceneGeometry.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -18,7 +18,7 @@
 #import "CVertexBufferReference.h"
 #import "CSceneGraphRenderer.h"
 
-@implementation CGeometryNode
+@implementation CSceneGeometry
 
 @synthesize type;
 @synthesize indicesBufferReference;

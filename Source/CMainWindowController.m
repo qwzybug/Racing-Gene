@@ -12,9 +12,9 @@
 #import "OpenGLTypes.h"
 #import "CRendererOpenGLLayer.h"
 #import "CTestRenderer.h"
-#import "CSceneGraph.h"
+#import "CScene.h"
 #import "CSceneGraphRenderer.h"
-#import "CGeometryNode.h"
+#import "CSceneGeometry.h"
 #import "CVertexBuffer_FactoryExtensions.h"
 #import "CShader.h"
 #import "CProgram.h"
@@ -22,7 +22,7 @@
 #import "CVertexBufferReference.h"
 #import "CProgram_ConvenienceExtensions.h"
 #import "CGameModel.h"
-#import "CChipmunkBody.h"
+#import "CPhysicsBody.h"
 
 @interface CMainWindowController ()
 @property (readwrite, nonatomic, retain) CGameModel *model;

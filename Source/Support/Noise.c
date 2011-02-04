@@ -8,6 +8,8 @@
 
 #import "Noise.h"
 
+#include <math.h>
+
 double Linear_Interpolate(double a, double b, double x)
     {
 	return(a * (1.0 - x) + b * x);

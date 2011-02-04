@@ -6,7 +6,7 @@
 //  Copyright 2010 toxicsoftware.com. All rights reserved.
 //
 
-#import "CSceneGraphNode.h"
+#import "CSceneNode.h"
 
 #import "OpenGLIncludes.h"
 
@@ -14,7 +14,7 @@
 @class CVertexBufferReference;
 @class CTexture;
 
-@interface CGeometryNode : CSceneGraphNode {
+@interface CSceneGeometry : CSceneNode {
 }
 
 @property (readwrite, nonatomic, assign) GLenum type;

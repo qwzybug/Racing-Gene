@@ -8,7 +8,7 @@
 
 #import "CSceneGraphRenderer.h"
 
-#import "CSceneGraph.h"
+#import "CScene.h"
 
 @implementation CSceneGraphRenderer
 
@@ -29,7 +29,7 @@
     return(self);
     }
 
-- (id)initWithSceneGraph:(CSceneGraph *)inSceneGraph
+- (id)initWithSceneGraph:(CScene *)inSceneGraph
 	{
 	if ((self = [self init]) != NULL)
 		{

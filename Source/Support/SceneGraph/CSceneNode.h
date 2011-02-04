@@ -12,7 +12,7 @@
 
 @class CSceneGraphRenderer;
 
-@interface CSceneGraphNode : NSObject {
+@interface CSceneNode : NSObject {
 }
 
 @property (readwrite, nonatomic, assign) Matrix4 transform;

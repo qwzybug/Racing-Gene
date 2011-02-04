@@ -6,11 +6,11 @@
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import "CGroupNode.h"
+#import "CSceneGroupNode.h"
 
-#import "CSceneGraphNode.h"
+#import "CSceneNode.h"
 
-@implementation CGroupNode
+@implementation CSceneGroupNode
 
 @synthesize nodes;
 
@@ -24,7 +24,7 @@
 
 - (void)render:(CSceneGraphRenderer *)inRenderer
     {
-    for (CSceneGraphNode *theNode in self.nodes)
+    for (CSceneNode *theNode in self.nodes)
         {
         [theNode render:inRenderer];
         }

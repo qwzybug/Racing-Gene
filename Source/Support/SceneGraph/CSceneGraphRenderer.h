@@ -10,15 +10,15 @@
 
 #import "OpenGLTypes.h"
 
-@class CSceneGraph;
+@class CScene;
 
 @interface CSceneGraphRenderer : CRenderer {
 }
 
-@property (readwrite, nonatomic, retain) CSceneGraph *sceneGraph;
+@property (readwrite, nonatomic, retain) CScene *sceneGraph;
 
 @property (readwrite, nonatomic, assign) Matrix4 transform;;
 
-- (id)initWithSceneGraph:(CSceneGraph *)inSceneGraph;
+- (id)initWithSceneGraph:(CScene *)inSceneGraph;
 
 @end

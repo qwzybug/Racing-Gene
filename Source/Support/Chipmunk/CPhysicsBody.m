@@ -1,21 +1,21 @@
 //
-//  CChipmunkBody.m
+//  CPhysicsBody.m
 //  Racing Gene
 //
 //  Created by Jonathan Wight on 01/31/11.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import "CChipmunkBody.h"
+#import "CPhysicsBody.h"
 
 
-@implementation CChipmunkBody
+@implementation CPhysicsBody
 
 @synthesize body;
 
-+ (CChipmunkBody *)staticBody
++ (CPhysicsBody *)staticBody
     {
-    return([[[CChipmunkBody alloc] initWithBody:cpBodyNewStatic()] autorelease]);
+    return([[[CPhysicsBody alloc] initWithBody:cpBodyNewStatic()] autorelease]);
     }
 
 - (id)initWithBody:(cpBody *)inBody;

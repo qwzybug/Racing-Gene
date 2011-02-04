@@ -1,5 +1,5 @@
 //
-//  CChipmunkBody.h
+//  CPhysicsBody.h
 //  Racing Gene
 //
 //  Created by Jonathan Wight on 01/31/11.
@@ -12,9 +12,9 @@
 
 #import "OpenGLTypes.h"
 
-@class CChipmunkShape;
+@class CPhysicsShape;
 
-@interface CChipmunkBody : NSObject {
+@interface CPhysicsBody : NSObject {
 
 }
 
@@ -22,7 +22,7 @@
 @property (readwrite, nonatomic, assign) cpVect position;
 @property (readonly, nonatomic, assign) Matrix4 modelMatrix;
 
-+ (CChipmunkBody *)staticBody;
++ (CPhysicsBody *)staticBody;
 
 - (id)initWithBody:(cpBody *)inBody;
 - (id)initWithMass:(cpFloat)inMass inertia:(cpFloat)inInertia;

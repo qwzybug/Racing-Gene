@@ -1,5 +1,5 @@
 //
-//  CTest.m
+//  CGameModel.m
 //  Racing Gene
 //
 //  Created by Jonathan Wight on 01/31/11.
@@ -8,21 +8,21 @@
 
 #import "CGameModel.h"
 
-#import "CChipmunkSpace.h"
-#import "CChipmunkBody.h"
-#import "CChipmunkShape.h"
-#import "CChipmunkShape_GeometryExtensions.h"
-#import "CSceneGraph.h"
-#import "CGeometryNode.h"
-#import "CGeometryNode_ConvenienceExtensions.h"
+#import "CPhysicsSpace.h"
+#import "CPhysicsBody.h"
+#import "CPhysicsShape.h"
+#import "CPhysicsShape_GeometryExtensions.h"
+#import "CScene.h"
+#import "CSceneGeometry.h"
+#import "CSceneGeometry_ConvenienceExtensions.h"
 #import "CLandscape.h"
 #import "CVertexBuffer.h"
 
 static void updateShape(void *ptr, void* unused);
 
 @interface CGameModel ()
-@property (readwrite, nonatomic, retain) CChipmunkSpace *chipmunkSpace;
-@property (readwrite, nonatomic, retain) CChipmunkShape *ballShape;
+@property (readwrite, nonatomic, retain) CPhysicsSpace *chipmunkSpace;
+@property (readwrite, nonatomic, retain) CPhysicsShape *ballShape;
 
 - (void)setup;
 @end
@@ -48,10 +48,10 @@ static void updateShape(void *ptr, void* unused);
 
 - (void)setup
     {
-    self.sceneGraph = [[[CSceneGraph alloc] init] autorelease];
+    self.sceneGraph = [[[CScene alloc] init] autorelease];
 
 
-    self.chipmunkSpace = [[[CChipmunkSpace alloc] init] autorelease];
+    self.chipmunkSpace = [[[CPhysicsSpace alloc] init] autorelease];
 
     self.chipmunkSpace.space->gravity = (cpVect){ 0.0, -100.0 };  
     self.chipmunkSpace.space->elasticIterations = 10;
@@ -89,7 +89,7 @@ static void updateShape(void *ptr, void* unused);
         }
 
     CVertexBuffer *theLandscapeVertexBuffer = [[[CVertexBuffer alloc] initWithTarget:GL_ARRAY_BUFFER usage:GL_STATIC_DRAW data:theLandscapeVertexData] autorelease];
-    CGeometryNode *theLandscapeNode = [CGeometryNode flatGeometryNodeWithCoordinatesBuffer:theLandscapeVertexBuffer];
+    CSceneGeometry *theLandscapeNode = [CSceneGeometry flatGeometryNodeWithCoordinatesBuffer:theLandscapeVertexBuffer];
 
     // #################################################################################################################
 
@@ -97,13 +97,13 @@ static void updateShape(void *ptr, void* unused);
 
     // #################################################################################################################
 
-    CChipmunkBody *theChassisBody = [[[CChipmunkBody alloc] initWithMass:100 inertia:100] autorelease];
+    CPhysicsBody *theChassisBody = [[[CPhysicsBody alloc] initWithMass:100 inertia:100] autorelease];
     theChassisBody.position = (cpVect){ 0, 50 };
     [self.chipmunkSpace addBody:theChassisBody];
 
     self.carBody = theChassisBody;
 
-    CChipmunkShape *theChassisShape = [CChipmunkShape boxShapeWithBody:theChassisBody size:(CGSize){ 100, 5 }];
+    CPhysicsShape *theChassisShape = [CPhysicsShape boxShapeWithBody:theChassisBody size:(CGSize){ 100, 5 }];
     theChassisShape.group = 1;
     theChassisShape.elasticity = 1.4;
     theChassisShape.friction = 0.5;
@@ -111,7 +111,7 @@ static void updateShape(void *ptr, void* unused);
 
     // #################################################################################################################
 
-    CGeometryNode *theChassisNode = [CGeometryNode flatGeometryNodeWithCoordinatesBuffer:[theChassisShape vertexBuffer]];
+    CSceneGeometry *theChassisNode = [CSceneGeometry flatGeometryNodeWithCoordinatesBuffer:[theChassisShape vertexBuffer]];
 //    theChassisNode.transform = theChassisBody.modelMatrix;
     theChassisShape.userInfo = theChassisNode;
 
@@ -122,11 +122,11 @@ static void updateShape(void *ptr, void* unused);
 
     // #################################################################################################################
 
-    CChipmunkBody *theFrontWheelBody = [[[CChipmunkBody alloc] initWithMass:100 inertia:100] autorelease];
+    CPhysicsBody *theFrontWheelBody = [[[CPhysicsBody alloc] initWithMass:100 inertia:100] autorelease];
     theFrontWheelBody.position = (cpVect){ 50, carY };
     [self.chipmunkSpace addBody:theFrontWheelBody];
 
-    CChipmunkShape *theFrontWheelShape = [CChipmunkShape ballShapeWithBody:theFrontWheelBody radius:tireRadius];
+    CPhysicsShape *theFrontWheelShape = [CPhysicsShape ballShapeWithBody:theFrontWheelBody radius:tireRadius];
     theFrontWheelShape.group = 1;
     theFrontWheelShape.elasticity = 1.4;
     theFrontWheelShape.friction = 10.0;
@@ -134,17 +134,17 @@ static void updateShape(void *ptr, void* unused);
 
     // #################################################################################################################
 
-    CGeometryNode *theFrontWheelNode = [CGeometryNode circleGeometryNodeWithRadius:cpCircleShapeGetRadius(theFrontWheelShape.shape)];
+    CSceneGeometry *theFrontWheelNode = [CSceneGeometry circleGeometryNodeWithRadius:cpCircleShapeGetRadius(theFrontWheelShape.shape)];
 //    theFrontWheelNode.transform = theFrontWheelBody.modelMatrix;
     theFrontWheelShape.userInfo = theFrontWheelNode;
 
     // #################################################################################################################
 
-    CChipmunkBody *theRearWheelBody = [[[CChipmunkBody alloc] initWithMass:100 inertia:100] autorelease];
+    CPhysicsBody *theRearWheelBody = [[[CPhysicsBody alloc] initWithMass:100 inertia:100] autorelease];
     theRearWheelBody.position = (cpVect){ -50, carY };
     [self.chipmunkSpace addBody:theRearWheelBody];
 
-    CChipmunkShape *theRearWheelShape = [CChipmunkShape ballShapeWithBody:theRearWheelBody radius:tireRadius];
+    CPhysicsShape *theRearWheelShape = [CPhysicsShape ballShapeWithBody:theRearWheelBody radius:tireRadius];
     theRearWheelShape.group = 1;
     theRearWheelShape.elasticity = 1.4;
     theRearWheelShape.friction = 10.0;
@@ -152,7 +152,7 @@ static void updateShape(void *ptr, void* unused);
 
     // #################################################################################################################
 
-    CGeometryNode *theRearWheelNode = [CGeometryNode circleGeometryNodeWithRadius:cpCircleShapeGetRadius(theRearWheelShape.shape)];
+    CSceneGeometry *theRearWheelNode = [CSceneGeometry circleGeometryNodeWithRadius:cpCircleShapeGetRadius(theRearWheelShape.shape)];
 //    theRearWheelNode.transform = theRearWheelBody.modelMatrix;
     theRearWheelShape.userInfo = theRearWheelNode;
 
@@ -193,10 +193,10 @@ static void updateShape(void *ptr, void *unused)
     {
 	// Get our shape
 	cpShape *theShape = (cpShape*)ptr;
-    CChipmunkShape *theBallShape = theShape->data;
+    CPhysicsShape *theBallShape = theShape->data;
     
-    CGeometryNode *theBallNode = theBallShape.userInfo;
-    CChipmunkBody *theBallBody = theBallShape.body;
+    CSceneGeometry *theBallNode = theBallShape.userInfo;
+    CPhysicsBody *theBallBody = theBallShape.body;
     
     cpVect thePosition = cpBodyGetPos(theBallBody.body);
     cpFloat theAngle = cpBodyGetAngle(theBallBody.body);

@@ -1,5 +1,5 @@
 //
-//  CChipmunkSpace.h
+//  CPhysicsSpace.h
 //  Racing Gene
 //
 //  Created by Jonathan Wight on 01/31/11.
@@ -10,15 +10,15 @@
 
 #include "chipmunk.h"
 
-@class CChipmunkBody;
-@class CChipmunkShape;
+@class CPhysicsBody;
+@class CPhysicsShape;
 
-@interface CChipmunkSpace : NSObject {
+@interface CPhysicsSpace : NSObject {
 
 }
 
 @property (readonly, nonatomic, assign) cpSpace *space;
-@property (readonly, nonatomic, assign) CChipmunkBody *staticBody;
+@property (readonly, nonatomic, assign) CPhysicsBody *staticBody;
 
 @property (readonly, nonatomic, assign) cpFloat simulationRate;
 @property (readonly, nonatomic, assign) cpFloat simulationSteps;;
@@ -26,9 +26,9 @@
 - (id)init;
 - (id)initWithGravity:(cpVect)inGravity;
 
-- (void)addBody:(CChipmunkBody *)inBody;
-- (void)addShape:(CChipmunkShape *)inShape;
-- (void)addStaticShape:(CChipmunkShape *)inShape;
+- (void)addBody:(CPhysicsBody *)inBody;
+- (void)addShape:(CPhysicsShape *)inShape;
+- (void)addStaticShape:(CPhysicsShape *)inShape;
 
 - (void)step;
 

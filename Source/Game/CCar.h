@@ -8,14 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class CGeometryNode;
-@class CChipmunkBody;
+@class CSceneGeometry;
+@class CPhysicsBody;
 
 @interface CCar : NSObject {
 
 }
 
-@property (readwrite, nonatomic, retain) CGeometryNode *geometry;
-@property (readwrite, nonatomic, retain) CChipmunkBody *body;
+@property (readwrite, nonatomic, retain) CSceneGeometry *geometry;
+@property (readwrite, nonatomic, retain) CPhysicsBody *body;
 
 @end

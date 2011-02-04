@@ -6,10 +6,10 @@
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import "CSceneGraphNode.h"
+#import "CSceneNode.h"
 
 
-@interface CGroupNode : CSceneGraphNode {
+@interface CSceneGroupNode : CSceneNode {
 
 }
 
