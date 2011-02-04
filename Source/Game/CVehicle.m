@@ -12,7 +12,7 @@
 
 #import "CPhysicsBody.h"
 #import "CSceneGeometry.h"
-#import "CSceneGroupNode.h"
+#import "CSceneGroup.h"
 #import "CPhysicsShape.h"
 #import "CSceneGeometry.h"
 #import "CPhysicsBody_Extensions.h"
@@ -113,7 +113,7 @@
     theRearWheelShape.userInfo = theRearWheelNode;
 
 
-    CSceneGroupNode *theGroup = [[[CSceneGroupNode alloc] init] autorelease];
+    CSceneGroup *theGroup = [[[CSceneGroup alloc] init] autorelease];
     theGroup.nodes = [NSArray arrayWithObjects:
         theChassisNode,
         theFrontWheelNode,

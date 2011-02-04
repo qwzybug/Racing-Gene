@@ -6,9 +6,9 @@
 //  Copyright 2010 toxicsoftware.com. All rights reserved.
 //
 
-#import "CSceneGroupNode.h"
+#import "CSceneGroup.h"
 
-@interface CScene : CSceneGroupNode {
+@interface CScene : CSceneGroup {
 }
 
 //- (id)initWithPath:(NSString *)inPath;

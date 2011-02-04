@@ -72,7 +72,7 @@
 		45FD6F6712FA55D600523A5A /* CRendererView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4212FA55D600523A5A /* CRendererView2.m */; };
 		45FD6F6812FA55D600523A5A /* CSceneGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4512FA55D600523A5A /* CSceneGeometry.m */; };
 		45FD6F6912FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4712FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m */; };
-		45FD6F6A12FA55D600523A5A /* CSceneGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4912FA55D600523A5A /* CSceneGroupNode.m */; };
+		45FD6F6A12FA55D600523A5A /* CSceneGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4912FA55D600523A5A /* CSceneGroup.m */; };
 		45FD6F6B12FA55D600523A5A /* CScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4B12FA55D600523A5A /* CScene.m */; };
 		45FD6F6C12FA55D600523A5A /* CSceneNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4D12FA55D600523A5A /* CSceneNode.m */; };
 		45FD6F6D12FA55D600523A5A /* CSceneGraphRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6F4F12FA55D600523A5A /* CSceneGraphRenderer.m */; };
@@ -215,8 +215,8 @@
 		45FD6F4512FA55D600523A5A /* CSceneGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGeometry.m; sourceTree = "<group>"; };
 		45FD6F4612FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGeometry_ConvenienceExtensions.h; sourceTree = "<group>"; };
 		45FD6F4712FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGeometry_ConvenienceExtensions.m; sourceTree = "<group>"; };
-		45FD6F4812FA55D600523A5A /* CSceneGroupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneGroupNode.h; sourceTree = "<group>"; };
-		45FD6F4912FA55D600523A5A /* CSceneGroupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGroupNode.m; sourceTree = "<group>"; };
+		45FD6F4812FA55D600523A5A /* CSceneGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CSceneGroup.h; sourceTree = "<group>"; };
+		45FD6F4912FA55D600523A5A /* CSceneGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSceneGroup.m; sourceTree = "<group>"; };
 		45FD6F4A12FA55D600523A5A /* CScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CScene.h; sourceTree = "<group>"; };
 		45FD6F4B12FA55D600523A5A /* CScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CScene.m; sourceTree = "<group>"; };
 		45FD6F4C12FA55D600523A5A /* CSceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSceneNode.h; sourceTree = "<group>"; };
@@ -542,8 +542,8 @@
 				45FD6F4512FA55D600523A5A /* CSceneGeometry.m */,
 				45FD6F4612FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.h */,
 				45FD6F4712FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m */,
-				45FD6F4812FA55D600523A5A /* CSceneGroupNode.h */,
-				45FD6F4912FA55D600523A5A /* CSceneGroupNode.m */,
+				45FD6F4812FA55D600523A5A /* CSceneGroup.h */,
+				45FD6F4912FA55D600523A5A /* CSceneGroup.m */,
 				45FD6F4A12FA55D600523A5A /* CScene.h */,
 				45FD6F4B12FA55D600523A5A /* CScene.m */,
 				45FD6F4C12FA55D600523A5A /* CSceneNode.h */,
@@ -673,7 +673,7 @@
 				45FD6F6712FA55D600523A5A /* CRendererView2.m in Sources */,
 				45FD6F6812FA55D600523A5A /* CSceneGeometry.m in Sources */,
 				45FD6F6912FA55D600523A5A /* CSceneGeometry_ConvenienceExtensions.m in Sources */,
-				45FD6F6A12FA55D600523A5A /* CSceneGroupNode.m in Sources */,
+				45FD6F6A12FA55D600523A5A /* CSceneGroup.m in Sources */,
 				45FD6F6B12FA55D600523A5A /* CScene.m in Sources */,
 				45FD6F6C12FA55D600523A5A /* CSceneNode.m in Sources */,
 				45FD6F6D12FA55D600523A5A /* CSceneGraphRenderer.m in Sources */,

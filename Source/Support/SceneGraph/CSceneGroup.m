@@ -6,11 +6,11 @@
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 
-#import "CSceneGroupNode.h"
+#import "CSceneGroup.h"
 
 #import "CSceneNode.h"
 
-@implementation CSceneGroupNode
+@implementation CSceneGroup
 
 @synthesize nodes;
 

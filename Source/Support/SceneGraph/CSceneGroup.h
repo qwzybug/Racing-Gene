@@ -9,7 +9,7 @@
 #import "CSceneNode.h"
 
 
-@interface CSceneGroupNode : CSceneNode {
+@interface CSceneGroup : CSceneNode {
 
 }
 
