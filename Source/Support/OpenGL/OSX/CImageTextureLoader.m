@@ -57,7 +57,7 @@
         theFormat = GL_RGBA;
         theType = GL_UNSIGNED_BYTE;
 
-        NSLog(@"Unknown model (%d), alpha (%d) or bits per component (%d)", theModel, theAlphaInfo, theBitsPerComponent);
+        NSLog(@"Unknown model (%d), alpha (%d) or bits per component (%ld)", theModel, theAlphaInfo, theBitsPerComponent);
         
         NSMutableData *theMutableData = [NSMutableData dataWithLength:inImage.size.width * 4 * inImage.size.height];
         theData = theMutableData;
