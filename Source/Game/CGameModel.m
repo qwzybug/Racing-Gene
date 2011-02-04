@@ -46,6 +46,19 @@ static void updateShape(void *ptr, void* unused);
     return(self);
     }
 
+- (void)dealloc
+    {
+    [sceneGraph release];
+    sceneGraph = NULL;
+
+    [chipmunkSpace release];
+    chipmunkSpace = NULL;
+
+    //
+    [super dealloc];
+    }
+
+
 - (void)setup
     {
     self.sceneGraph = [[[CScene alloc] init] autorelease];

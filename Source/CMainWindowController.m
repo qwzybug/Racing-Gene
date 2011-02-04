@@ -43,6 +43,9 @@
 
 - (void)dealloc
     {
+    [model release];
+    model = NULL;
+    
     [super dealloc];
     }
 

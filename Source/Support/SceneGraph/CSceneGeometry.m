@@ -29,6 +29,30 @@
 @synthesize program;
 @synthesize vertexBuffers;
 
+- (void)dealloc
+    {
+    [indicesBufferReference release];
+    indicesBufferReference = NULL;
+
+    [coordinatesBufferReference release];
+    coordinatesBufferReference = NULL;
+
+    [textureCoordinatesBufferReference release];
+    textureCoordinatesBufferReference = NULL;
+
+    [colorsBufferReference release];
+    colorsBufferReference = NULL;
+
+    [texture release];
+    texture = NULL;
+
+    [vertexBuffers release];
+    vertexBuffers = NULL;
+    //
+    [super dealloc];
+    }
+
+
 - (void)render:(CSceneGraphRenderer *)inRenderer;
     {
     // Use shader program
