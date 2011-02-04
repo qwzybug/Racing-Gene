@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CSceneGraphNode;
+@class CSceneNode;
 @class CPhysicsBody;
 
 @interface CVehicle : NSObject {
@@ -16,7 +16,7 @@
 }
 
 @property (readwrite, nonatomic, retain) CPhysicsBody *chassis;
-@property (readwrite, nonatomic, retain) CSceneGraphNode *geometry;
+@property (readwrite, nonatomic, retain) CSceneNode *geometry;
 
 
 @end

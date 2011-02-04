@@ -61,7 +61,7 @@
 
     // #################################################################
 
-    self.geometry = (id)self.chassis.geometry;
+    self.geometry = self.chassis.geometry;
 
     }
 
