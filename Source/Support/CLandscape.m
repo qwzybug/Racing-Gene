@@ -17,16 +17,6 @@
 
 @synthesize heightValues;
 
-+ (void)load
-    {
-    NSAutoreleasePool *thePool = [[NSAutoreleasePool alloc] init];
-    
-    CLandscape *theLandscape = [[self alloc] init];
-    [theLandscape update];
-    
-    [thePool release];
-    }
-
 - (id)init
     {
     if ((self = [super init]) != NULL)
@@ -38,6 +28,14 @@
             }
         }
     return(self);
+    }
+
+- (void)dealloc
+    {
+    [heightValues release];
+    heightValues = NULL;
+    //
+    [super dealloc];
     }
 
 - (void)update

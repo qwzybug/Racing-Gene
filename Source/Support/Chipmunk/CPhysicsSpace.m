@@ -10,10 +10,12 @@
 
 #import "CPhysicsBody.h"
 #import "CPhysicsShape.h"
+#import "CPhysicsConstraint.h"
 
 @interface CPhysicsSpace ()
-@property (readwrite, nonatomic, retain) NSMutableArray *bodies;
-@property (readwrite, nonatomic, retain) NSMutableArray *shapes;
+@property (readwrite, nonatomic, retain) NSMutableArray *mutableBodies;
+@property (readwrite, nonatomic, retain) NSMutableArray *mutableShapes;
+@property (readwrite, nonatomic, retain) NSMutableArray *mutableConstraints;
 @end
 
 @implementation CPhysicsSpace
@@ -23,8 +25,9 @@
 @synthesize simulationRate;
 @synthesize simulationSteps;
 
-@synthesize bodies;
-@synthesize shapes;
+@synthesize mutableBodies;
+@synthesize mutableShapes;
+@synthesize mutableConstraints;
 
 - (id)init
     {
@@ -37,8 +40,9 @@
 //        space->elasticIterations = 10;
 //        space->damping = 0.1;
 
-        bodies = [[NSMutableArray alloc] init];
-        shapes = [[NSMutableArray alloc] init];
+        mutableBodies = [[NSMutableArray alloc] init];
+        mutableShapes = [[NSMutableArray alloc] init];
+        mutableConstraints = [[NSMutableArray alloc] init];
         
         simulationRate = 1.0;
         simulationSteps = 100;
@@ -57,11 +61,11 @@
 
 - (void)dealloc
     {
-    [bodies release];
-    bodies = NULL;
+    [mutableBodies release];
+    mutableBodies = NULL;
     
-    [shapes release];
-    shapes = NULL;
+    [mutableShapes release];
+    mutableShapes = NULL;
 
     cpSpaceFree(space);
     space = NULL;
@@ -86,19 +90,40 @@
 - (void)addBody:(CPhysicsBody *)inBody;
     {
     cpSpaceAddBody(self.space, inBody.body);
-    [self.bodies addObject:inBody];
+    [self.mutableBodies addObject:inBody];
+
+    for (CPhysicsBody *theSubbody in inBody.subbodies)
+        {
+        [self addBody:theSubbody];
+        }
+    
+    for (CPhysicsShape *theShape in inBody.shapes)
+        {
+        [self addShape:theShape];
+        }
+
+    for (CPhysicsConstraint *theConstraint in inBody.constraints)
+        {
+        [self addConstraint:theConstraint];
+        }
     }
 
 - (void)addShape:(CPhysicsShape *)inShape;
     {
     cpSpaceAddShape(self.space, inShape.shape);
-    [self.shapes addObject:inShape];
+    [self.mutableShapes addObject:inShape];
     }
 
 - (void)addStaticShape:(CPhysicsShape *)inShape;
     {
     cpSpaceAddStaticShape(self.space, inShape.shape);
-    [self.shapes addObject:inShape];
+    [self.mutableShapes addObject:inShape];
+    }
+
+- (void)addConstraint:(CPhysicsConstraint *)inConstraint;
+    {
+    cpSpaceAddConstraint(self.space, inConstraint.constraint);
+    [self.mutableConstraints addObject:inConstraint];
     }
 
 #pragma mark -
@@ -110,6 +135,5 @@
         cpSpaceStep(self.space, (1.0f / 60.0f) / self.simulationSteps);  
         }
     }
-
 
 @end

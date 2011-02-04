@@ -12,6 +12,7 @@
 
 #import "OpenGLTypes.h"
 
+@class CPhysicsConstraint;
 @class CPhysicsShape;
 
 @interface CPhysicsBody : NSObject {
@@ -19,6 +20,11 @@
 }
 
 @property (readonly, nonatomic, assign) cpBody *body;
+
+@property (readonly, nonatomic, retain) NSArray *subbodies;
+@property (readonly, nonatomic, retain) NSArray *shapes;
+@property (readonly, nonatomic, retain) NSArray *constraints;
+
 @property (readwrite, nonatomic, assign) cpVect position;
 @property (readonly, nonatomic, assign) Matrix4 modelMatrix;
 
@@ -26,5 +32,9 @@
 
 - (id)initWithBody:(cpBody *)inBody;
 - (id)initWithMass:(cpFloat)inMass inertia:(cpFloat)inInertia;
+
+- (void)addSubbody:(CPhysicsBody *)inSubbody;
+- (void)addShape:(CPhysicsShape *)inShape;
+- (void)addConstraint:(CPhysicsConstraint *)inConstraint;
 
 @end

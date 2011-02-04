@@ -12,6 +12,7 @@
 
 @class CPhysicsBody;
 @class CPhysicsShape;
+@class CPhysicsConstraint;
 
 @interface CPhysicsSpace : NSObject {
 
@@ -29,6 +30,8 @@
 - (void)addBody:(CPhysicsBody *)inBody;
 - (void)addShape:(CPhysicsShape *)inShape;
 - (void)addStaticShape:(CPhysicsShape *)inShape;
+
+- (void)addConstraint:(CPhysicsConstraint *)inConstraint;
 
 - (void)step;
 

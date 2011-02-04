@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		453782A412FB902000B9D736 /* CGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A312FB902000B9D736 /* CGameModel.m */; };
-		453782A712FB902900B9D736 /* CCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A612FB902900B9D736 /* CCar.m */; };
+		453782A712FB902900B9D736 /* CVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 453782A612FB902900B9D736 /* CVehicle.m */; };
 		4537832F12FB978C00B9D736 /* CPhysicsConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4537832E12FB978C00B9D736 /* CPhysicsConstraint.m */; };
+		4596DDDB12FBC759005015A4 /* CPhysicsBody_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4596DDDA12FBC758005015A4 /* CPhysicsBody_Extensions.m */; };
 		45FD6A6C12FA463F00523A5A /* CMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A4F12FA463E00523A5A /* CMainWindowController.m */; };
 		45FD6A7312FA463F00523A5A /* CApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5E12FA463E00523A5A /* CApplicationDelegate.m */; };
 		45FD6A7412FA463F00523A5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A5F12FA463E00523A5A /* main.m */; };
-		45FD6A7712FA463F00523A5A /* Racing_GeneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FD6A6812FA463F00523A5A /* Racing_GeneAppDelegate.m */; };
 		45FD6A8412FA464300523A5A /* Flat.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 45FD6A7A12FA464300523A5A /* Flat.fsh */; };
 		45FD6A8512FA464300523A5A /* Flat.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 45FD6A7B12FA464300523A5A /* Flat.vsh */; };
 		45FD6A9412FA464A00523A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45FD6A8F12FA464A00523A5A /* InfoPlist.strings */; };
@@ -87,8 +87,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		453782A212FB902000B9D736 /* CGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGameModel.h; sourceTree = "<group>"; };
 		453782A312FB902000B9D736 /* CGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGameModel.m; sourceTree = "<group>"; };
-		453782A512FB902900B9D736 /* CCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCar.h; sourceTree = "<group>"; };
-		453782A612FB902900B9D736 /* CCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCar.m; sourceTree = "<group>"; };
+		453782A512FB902900B9D736 /* CVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CVehicle.h; sourceTree = "<group>"; };
+		453782A612FB902900B9D736 /* CVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVehicle.m; sourceTree = "<group>"; };
 		4537832D12FB978C00B9D736 /* CPhysicsConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsConstraint.h; sourceTree = "<group>"; };
 		4537832E12FB978C00B9D736 /* CPhysicsConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsConstraint.m; sourceTree = "<group>"; };
 		4537833812FB983A00B9D736 /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
@@ -119,14 +119,14 @@
 		4537835212FB983A00B9D736 /* cpSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpace.h; sourceTree = "<group>"; };
 		4537835312FB983A00B9D736 /* cpSpaceHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpaceHash.h; sourceTree = "<group>"; };
 		4537835412FB983A00B9D736 /* cpVect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpVect.h; sourceTree = "<group>"; };
+		4596DDD912FBC757005015A4 /* CPhysicsBody_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPhysicsBody_Extensions.h; sourceTree = "<group>"; };
+		4596DDDA12FBC758005015A4 /* CPhysicsBody_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPhysicsBody_Extensions.m; sourceTree = "<group>"; };
 		45FD6A4E12FA463E00523A5A /* CMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMainWindowController.h; sourceTree = "<group>"; };
 		45FD6A4F12FA463E00523A5A /* CMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMainWindowController.m; sourceTree = "<group>"; };
 		45FD6A5D12FA463E00523A5A /* CApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CApplicationDelegate.h; sourceTree = "<group>"; };
 		45FD6A5E12FA463E00523A5A /* CApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CApplicationDelegate.m; sourceTree = "<group>"; };
 		45FD6A5F12FA463E00523A5A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		45FD6A6512FA463F00523A5A /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		45FD6A6712FA463F00523A5A /* Racing_GeneAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Racing_GeneAppDelegate.h; sourceTree = "<group>"; };
-		45FD6A6812FA463F00523A5A /* Racing_GeneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Racing_GeneAppDelegate.m; sourceTree = "<group>"; };
 		45FD6A7A12FA464300523A5A /* Flat.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Flat.fsh; sourceTree = "<group>"; };
 		45FD6A7B12FA464300523A5A /* Flat.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Flat.vsh; sourceTree = "<group>"; };
 		45FD6A9012FA464A00523A5A /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -297,8 +297,8 @@
 			children = (
 				453782A212FB902000B9D736 /* CGameModel.h */,
 				453782A312FB902000B9D736 /* CGameModel.m */,
-				453782A512FB902900B9D736 /* CCar.h */,
-				453782A612FB902900B9D736 /* CCar.m */,
+				453782A512FB902900B9D736 /* CVehicle.h */,
+				453782A612FB902900B9D736 /* CVehicle.m */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -363,8 +363,6 @@
 				45FD6A5E12FA463E00523A5A /* CApplicationDelegate.m */,
 				45FD6A5F12FA463E00523A5A /* main.m */,
 				45FD6A6512FA463F00523A5A /* Prefix.pch */,
-				45FD6A6712FA463F00523A5A /* Racing_GeneAppDelegate.h */,
-				45FD6A6812FA463F00523A5A /* Racing_GeneAppDelegate.m */,
 				453782A112FB902000B9D736 /* Game */,
 				45FD6F0E12FA55D600523A5A /* Support */,
 			);
@@ -471,6 +469,8 @@
 			children = (
 				45FD6F1012FA55D600523A5A /* CPhysicsBody.h */,
 				45FD6F1112FA55D600523A5A /* CPhysicsBody.m */,
+				4596DDD912FBC757005015A4 /* CPhysicsBody_Extensions.h */,
+				4596DDDA12FBC758005015A4 /* CPhysicsBody_Extensions.m */,
 				45FD6F1212FA55D600523A5A /* CPhysicsShape.h */,
 				45FD6F1312FA55D600523A5A /* CPhysicsShape.m */,
 				45FD6F1412FA55D600523A5A /* CPhysicsShape_GeometryExtensions.h */,
@@ -621,7 +621,6 @@
 				45FD6A6C12FA463F00523A5A /* CMainWindowController.m in Sources */,
 				45FD6A7312FA463F00523A5A /* CApplicationDelegate.m in Sources */,
 				45FD6A7412FA463F00523A5A /* main.m in Sources */,
-				45FD6A7712FA463F00523A5A /* Racing_GeneAppDelegate.m in Sources */,
 				45FD6D3012FA465000523A5A /* chipmunk.c in Sources */,
 				45FD6D3212FA465000523A5A /* cpConstraint.c in Sources */,
 				45FD6D3312FA465000523A5A /* cpDampedRotarySpring.c in Sources */,
@@ -680,8 +679,9 @@
 				45FD6F6D12FA55D600523A5A /* CSceneGraphRenderer.m in Sources */,
 				45FD6F7312FA562400523A5A /* CRandom.m in Sources */,
 				453782A412FB902000B9D736 /* CGameModel.m in Sources */,
-				453782A712FB902900B9D736 /* CCar.m in Sources */,
+				453782A712FB902900B9D736 /* CVehicle.m in Sources */,
 				4537832F12FB978C00B9D736 /* CPhysicsConstraint.m in Sources */,
+				4596DDDB12FBC759005015A4 /* CPhysicsBody_Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
