@@ -66,11 +66,13 @@ springForce(cpConstraint *spring, cpFloat dist)
 	self.mainBody.position = (cpVect){ 0, 50 };
 	
 	CPhysicsBody *lastBody = self.mainBody;
+	CPhysicsBody *lastLastBody = self.mainBody;
 	NSMutableArray *nodes = [NSMutableArray array];
 	
 	// add body parts
 	cpVect p = self.mainBody.position;
 	cpVect lastP = self.mainBody.position;
+	cpVect lastLastP = self.mainBody.position;
 	int gene_num = 0;
 	hex_gene gene;
 	do {
@@ -100,9 +102,9 @@ springForce(cpConstraint *spring, cpFloat dist)
 		[self.mainBody addConstraint:springConstraint];
 		
 		// and between this point and the origin
-		cpVect off = (cpVect){ p.x - self.mainBody.position.x, p.y - self.mainBody.position.y };
+		cpVect off = (cpVect){ p.x - lastLastP.x, p.y - lastLastP.y };
 		float spring2Length = sqrt(off.x * off.x + off.y * off.y);
-		cpConstraint *spring2 = cpDampedSpringNew(self.mainBody.body, cell.body, (cpVect){ 0, 0 }, (cpVect){ 0, 0 }, spring2Length, 500.0, 0.5);
+		cpConstraint *spring2 = cpDampedSpringNew(lastLastBody.body, cell.body, (cpVect){ 0, 0 }, (cpVect){ 0, 0 }, spring2Length, 500.0, 0.5);
 		cpDampedSpringSetSpringForceFunc(spring2, springForce);
 		CPhysicsConstraint *spring2Constraint = [[[CPhysicsConstraint alloc] initWithConstraint:spring2] autorelease];
 		[self.mainBody addConstraint:spring2Constraint];
@@ -116,12 +118,14 @@ springForce(cpConstraint *spring, cpFloat dist)
 		
 		[nodes addObject:cellNode];
 		
+		lastLastBody = lastBody;
 		lastBody = cell;
 		
 		// compute next body position
 		if (gene.next_hex != -1)
 			sz = (sz + self.critter.genome[gene_num + 1].size) / 2;
 		
+		lastLastP = lastP;
 		lastP = p;
 		switch (gene.next_hex) {
 			case 0:
